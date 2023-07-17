@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- step1. Create HTML -->
+  <body>
+    <span>Total clicks: 0</span>
+    <button id="btn">Click me</button>
+  </body>
+  <!-- step2. JS 불러오기-->
+  <script>
+    let counter = 0;
+    const button = document.getElementById("btn");
+    const span = document.querySelector("span");
+
+    function handleClick() {
+      // step4. Update data
+      // Problem 02. 클릭이 되고 있지만 html에 반영되고 있지 않아 innerText 사용
+      counter = counter + 1;
+      // step5. Update HTML
+      span.innerText = `Total clicks: ${counter}`;
+      console.log("i have been clicked");
+    }
+
+    // step3. event 감지
+    // Problem 01. vanilla JS는 "click" 오타 시 알려주지 않음
+    button.addEventListener("click", handleClick);
+  </script>
+</html>

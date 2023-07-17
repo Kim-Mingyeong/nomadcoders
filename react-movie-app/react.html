@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- #root + enterkey -->
+    <div id="root"></div>
+  </body>
+  <!-- ReactJS: 애플리케이션을 interactive하게 만들어 주는 Library -->
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.production.min.js"
+  ></script>
+  <!-- React DOM: React Element들을 HTML body에 둘 수 있도록 해주는 Library or Package  -->
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+  ></script>
+  <script>
+    // step1. Started JS and then Ended HTML
+    const root = document.getElementById("root");
+    // createElement(HTML tag, property(className or Id), argument)
+    const span = React.createElement(
+      "span",
+      { id: "sexy-span", style: { color: "blue" } },
+      "Hello I'm a span"
+    );
+
+    // render(): Show HTML
+    ReactDOM.render(span, root);
+  </script>
+</html>
